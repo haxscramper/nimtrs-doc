@@ -1064,91 +1064,91 @@ Check if all fields in <tt class="docutils literal"><span class="pre">impl</span
     <span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create predicate functor with head binding to variable <tt class="docutils literal"><span class="pre">predVar</span></tt>
 
 </dd>
 <a id="makeFunctor,F,varargs[Term[V,F]]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeFunctor%2CF%2Cvarargs%5BTerm%5BV%2CF%5D%5D"><span class="Identifier">makeFunctor</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">sym</span><span class="Other">:</span> <span class="Identifier">F</span><span class="Other">;</span> <span class="Identifier">subt</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><a href="trscore.html#Term"><span class="Identifier">Term</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#Term"><span class="Identifier">Term</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create functor using <tt class="docutils literal"><span class="pre">sym</span></tt> as functor head and <tt class="docutils literal"><span class="pre">subt</span></tt> as arguments.
 
 </dd>
 <a id="makeTermP,Term[V,F]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeTermP%2CTerm%5BV%2CF%5D"><span class="Identifier">makeTermP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patt</span><span class="Other">:</span> <a href="trscore.html#Term"><span class="Identifier">Term</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Convert term to pattern matching this term
 
 </dd>
 <a id="makeAndP,seq[TermPattern[V,F]]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeAndP%2Cseq%5BTermPattern%5BV%2CF%5D%5D"><span class="Identifier">makeAndP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patts</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create 'and' pattern from sequence of patterns: <tt class="docutils literal"><span class="pre">E1 &amp; E2 &amp;E3 ...</span></tt>
 
 </dd>
 <a id="makeAndP,varargs[TermPattern[V,F],makeTermP]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeAndP%2Cvarargs%5BTermPattern%5BV%2CF%5D%2CmakeTermP%5D"><span class="Identifier">makeAndP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patts</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">makeTermP</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create 'and' pattern from all arguments: <tt class="docutils literal"><span class="pre">E1 &amp; E2 &amp; E3</span></tt>
 
 </dd>
 <a id="makeOrP,seq[TermPattern[V,F]]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeOrP%2Cseq%5BTermPattern%5BV%2CF%5D%5D"><span class="Identifier">makeOrP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patts</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create 'or' pattern from all arguments: <tt class="docutils literal"><span class="pre">E1 | E2 | E2</span></tt>
 
 </dd>
 <a id="makeOptP,TermPattern[V,F]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeOptP%2CTermPattern%5BV%2CF%5D"><span class="Identifier">makeOptP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patt</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create optional pattern from argument: <tt class="docutils literal"><span class="pre">?E</span></tt>
 
 </dd>
 <a id="makeOptP,Term[V,F]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeOptP%2CTerm%5BV%2CF%5D"><span class="Identifier">makeOptP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patt</span><span class="Other">:</span> <a href="trscore.html#Term"><span class="Identifier">Term</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create optional pattern from term argument: <tt class="docutils literal"><span class="pre">?T</span></tt>
 
 </dd>
 <a id="makeZeroOrMoreP,TermPattern[V,F]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeZeroOrMoreP%2CTermPattern%5BV%2CF%5D"><span class="Identifier">makeZeroOrMoreP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patt</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create zero-or-more pattern from argument: <tt class="docutils literal"><span class="pre">*E</span></tt>
 
 </dd>
 <a id="makeZeroOrMoreP,Term[V,F]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeZeroOrMoreP%2CTerm%5BV%2CF%5D"><span class="Identifier">makeZeroOrMoreP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patt</span><span class="Other">:</span> <a href="trscore.html#Term"><span class="Identifier">Term</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create zero-or-more patern from term argument: <tt class="docutils literal"><span class="pre">*T</span></tt>
 
 </dd>
 <a id="makeNegationP,TermPattern[V,F]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeNegationP%2CTermPattern%5BV%2CF%5D"><span class="Identifier">makeNegationP</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patt</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Create negation patter from term: <tt class="docutils literal"><span class="pre">!E</span></tt>
 
 </dd>
 <a id="makeTermPattern,TermPattern[V,F]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeTermPattern%2CTermPattern%5BV%2CF%5D"><span class="Identifier">makeTermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patt</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Convert term pattern to term pattern (used to simplify DSL)
 
 </dd>
 <a id="makeTermPattern,Term[V,F]"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeTermPattern%2CTerm%5BV%2CF%5D"><span class="Identifier">makeTermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">patt</span><span class="Other">:</span> <a href="trscore.html#Term"><span class="Identifier">Term</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="trscore.html#TermPattern"><span class="Identifier">TermPattern</span></a><span class="Other">[</span><span class="Identifier">V</span><span class="Other">,</span> <span class="Identifier">F</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
+Convert term term to term pattern. Used in DSL - in regular code you might want to use <tt class="docutils literal"><span class="pre">makeTermP</span></tt>
 
 </dd>
 <a id="hash,VarSym"></a>
@@ -1935,7 +1935,7 @@ Iterate over all redex in term
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-08-27 14:13:21 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-08-29 10:41:10 UTC</small>
       </div>
     </div>
   </div>
